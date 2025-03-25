@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvenuto</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #4caf50, #81c784);
+            color: white;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: url('https://source.unsplash.com/1920x1080/?nature,landscape') no-repeat center center/cover;
+            color: white;
+            padding: 0 20px;
+        }
+        .hero-text {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .info-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            color: #fff;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: fit-content;
+            text-align: left;
+            font-size: 0.9em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Benvenuto nel Nostro Sito</h1>
+    </header>
+    <div class="hero">
+        <div class="hero-text">
+            <h2>Ciao, Esploratore!</h2>
+            <p>Scopri contenuti fantastici, idee innovative e molto altro ancora.</p>
+        </div>
+    </div>
+    <div class="info-box" id="infoBox">
+        <h3>Informazioni sul Dispositivo:</h3>
+        <p>Risoluzione dello Schermo: <span id="resolution"></span></p>
+        <p>Browser: <span id="browser"></span></p>
+    </div>
+    <footer>
+        <p>&copy; 2025 Il Tuo Sito. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        // JavaScript per ottenere informazioni sulla risoluzione e sul browser
+        document.getElementById('resolution').textContent = `${window.screen.width} x ${window.screen.height}`;
+        document.getElementById('browser').textContent = navigator.userAgent;
+    </script>
+</body>
+</html>
